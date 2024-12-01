@@ -16,22 +16,25 @@ function MovieLink({ data, name }) {
   }
 
   return (
-    <div className="bg-secondary rounded-lg mt-2 flex items-center border-r-4 border-r-primary">
-      <span className="mr-4">
+    <div className="bg-secondary rounded-lg rounded-br-none lg:rounded-br-lg mt-2 flex flex-col lg:flex-row gap-5 lg:gap-0 items-center border-r-4 border-r-primary">
+      <span className="lg:mr-4 mt-5 lg:mt-0">
         کیفیت:{" "}
         {`${type.at(0).toUpperCase()}${type.slice(
           1
         )} ${quality} ${video_codec}`}
       </span>
-      <span className="mr-8">حجم: {`${size}`}</span>
-      <span className="mr-8">
+      <span className="lg:mr-8">حجم: {`${size}`}</span>
+      <span className="lg:mr-8">
         سیدر: <span className="text-green-600">{seeds}</span>
       </span>
-      <span className="mr-8">
+      <span className="lg:mr-8">
         لیچر: <span className="text-red-600">{peers}</span>
       </span>
-      <div className="grid grid-cols-2 mr-auto">
-        <a href={url} className="py-3 px-8 bg-third text-white">
+      <div className="grid grid-cols-2 w-full lg:w-auto lg:mr-auto">
+        <a
+          href={url}
+          className="py-3 px-8 bg-third text-white flex justify-center"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -49,7 +52,7 @@ function MovieLink({ data, name }) {
         </a>
         <button
           onClick={handleCopyMagnet}
-          className="py-4 px-8 bg-primary rounded-l-lg"
+          className="py-4 px-8 bg-primary lg:rounded-l-lg flex justify-center"
         >
           <svg
             viewBox="-0.5 -0.5 16 16"

@@ -1,6 +1,6 @@
-export async function getSearchResualts(query) {
+export async function getSearchResults(query, page) {
   const res = await fetch(
-    `https://yts.mx/api/v2/list_movies.json?query_term=${query}&limit=6`
+    `https://yts.mx/api/v2/list_movies.json?query_term=${query}&limit=4&page=${page}`
   );
   const data = res.json();
   return data;

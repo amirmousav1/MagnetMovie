@@ -4,14 +4,15 @@ import { useNavigate } from "react-router";
 function Home() {
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
+
   function submitSearch(e) {
     e.preventDefault();
-    navigate(`/search?query=${query}`);
+    navigate(`/search?query=${query}&page=1`);
   }
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center gap-5 flex-col items-center px-5">
       <form
-        className="flex relative w-[38rem] border bg-white rounded-full border-third"
+        className="flex text-sm md:text-base relative sm:w-[25rem] md:w-[32rem] border bg-white rounded-full border-third"
         onSubmit={submitSearch}
       >
         <label htmlFor="search" className="">
@@ -37,12 +38,21 @@ function Home() {
           autoComplete="off"
           className="focus:outline-none py-3 flex-1"
           type="text"
-          placeholder="نام فیلم یا آی‌دی IMDb فیلم را وارد کنید..."
+          placeholder="نام فیلم یا شناسه IMDb"
         />
-        <button className="bg-third text-white rounded-l-full px-6">
+        <button className="bg-third text-white rounded-l-full px-6 focus:outline-none">
           جستجو
         </button>
       </form>
+      <h1 className="text-xl font-semibold">مووی مگنت، جستجوگر تورنت فیلم</h1>
+      <h2 className="text-sm text-third">جستجو بین 64 هزار فیلم</h2>
+      <span className="text-sm font-bold text-primary">
+        لطفا قبل از جستجو حتما VPN خود را روشن کنید.
+      </span>
+      <span className="text-sm text-third">
+        توجه داشته باشید که این سرویس تنها برای فیلم‌ها طراحی شده و شامل
+        سریال‌ها نمی‌شود.
+      </span>
     </div>
   );
 }

@@ -2,10 +2,11 @@ import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router";
 import { getMovieDetails, getMovieTorrents } from "./services/services";
 import MovieLink from "./MovieLink";
+import { SyncLoader } from "react-spinners";
 
 function Movie() {
   const { id } = useParams();
-  const { data, isPending } = useQuery({
+  const { data, isPending, isFetching } = useQuery({
     queryKey: ["movie"],
     queryFn: () => getMovieDetails(id),
   });
@@ -14,22 +15,23 @@ function Movie() {
     queryFn: () => getMovieTorrents(id),
   });
 
-  if (isPending || isTorrentLoading) return <span>در حال بارگذاری...</span>;
+  if (isPending || isTorrentLoading || isFetching)
+    return <SyncLoader color="#6A0DAD" />;
 
   return (
-    <div className="mx-20 mb-40 bg-white rounded-lg border p-4">
+    <div className="md:mx-20 mb-40 bg-white rounded-lg border p-4">
       <h1 className="text-center font-bold mt-3 text-lg">
         دانلود فیلم {`${data.Title} ${data.Year}`}
       </h1>
-      <div className="grid grid-cols-5 gap-4 mt-8">
-        <div>
+      <div className="flex flex-col items-center md:grid md:grid-cols-4 lg:grid-cols-5 gap-2 md:gap-3 lg:gap-4 mt-8">
+        <div className="md:col-span-4 lg:col-span-1 flex justify-center">
           <img
             className="rounded-lg hover:contrast-150 transition-all duration-300"
             src={`${data.Poster}`}
             alt={`${data.Title}`}
           />
         </div>
-        <div className="col-span-2 flex flex-col justify-between">
+        <div className="md:col-span-2 flex w-full gap-2 md:gap-3 lg:h-full flex-col justify-between">
           <div className="bg-secondary flex rounded-lg items-center">
             <div className="bg-primary text-white p-2">
               <svg
@@ -150,7 +152,7 @@ function Movie() {
             <span className="text-sm mr-2">نویسندگان: {data.Writer}</span>
           </div>
         </div>
-        <div className="col-span-2 flex flex-col justify-between">
+        <div className="md:col-span-2 flex w-full gap-2 md:gap-3 lg:h-full flex-col justify-between">
           <div className="bg-secondary flex rounded-lg items-center">
             <div className="bg-primary text-white p-2">
               <svg
@@ -269,7 +271,7 @@ function Movie() {
           </div>
         </div>
       </div>
-      <div className="bg-secondary flex rounded-lg items-center mt-4">
+      <div className="bg-secondary flex rounded-lg items-center mt-2 md:mt-3 lg:mt-4">
         <div className="bg-primary text-white p-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"

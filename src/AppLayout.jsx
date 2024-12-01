@@ -9,13 +9,16 @@ function AppLayout() {
       <header className="flex justify-center pt-4">
         <div>
           <Link to="/">
-            <img className="w-[125px]" src="../public/logo.png" alt="Logo" />
+            <img className="w-[125px]" src="/logo.png" alt="Logo" />
           </Link>
         </div>
       </header>
-      <main className="mt-4">
+      <main className="mt-4 w-fit mx-auto">
         <Outlet />
       </main>
+      <footer className="text-center py-5">
+        <p dir="ltr">©{new Date().getFullYear()} - MovieMagnet</p>
+      </footer>
     </div>
   );
 }
