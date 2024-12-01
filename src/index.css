@@ -10,13 +10,12 @@ body {
     font-family: iranyekan;
     font-style: normal;
     font-weight: bold;
-    src: url("/fonts/eot/IRANYekanWebBold.eot");
-    src: url("/fonts/eot/IRANYekanWebBold.eot?#iefix")
-        format("embedded-opentype"),
-      /* IE6-8 */ url("/fonts/woff/IRANYekanWebBold.woff") format("woff"),
-      /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-        url("/fonts/woff2/IRANYekanWebBold.woff2") format("woff2"),
-      /* FF39+,Chrome36+, Opera24+*/ url("/fonts/ttf/IRANYekanWebBold.ttf")
+    src: url("/fonts/IRANYekanWebBold.eot");
+    src: url("/fonts/IRANYekanWebBold.eot?#iefix") format("embedded-opentype"),
+      /* IE6-8 */ url("/fonts/IRANYekanWebBold.woff") format("woff"),
+      /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("/fonts/IRANYekanWebBold.woff2")
+        format("woff2"),
+      /* FF39+,Chrome36+, Opera24+*/ url("/fonts/IRANYekanWebBold.ttf")
         format("truetype");
   }
 
@@ -24,13 +23,13 @@ body {
     font-family: iranyekan;
     font-style: normal;
     font-weight: normal;
-    src: url("/fonts/eot/IRANYekanWebRegular.eot");
-    src: url("/fonts/eot/IRANYekanWebRegular.eot?#iefix")
+    src: url("/fonts/IRANYekanWebRegular.eot");
+    src: url("/fonts/IRANYekanWebRegular.eot?#iefix")
         format("embedded-opentype"),
-      /* IE6-8 */ url("/fonts/woff/IRANYekanWebRegular.woff") format("woff"),
+      /* IE6-8 */ url("/fonts/IRANYekanWebRegular.woff") format("woff"),
       /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-        url("/fonts/woff2/IRANYekanWebRegular.woff2") format("woff2"),
-      /* FF39+,Chrome36+, Opera24+*/ url("/fonts/ttf/IRANYekanWebRegular.ttf")
+        url("/fonts/IRANYekanWebRegular.woff2") format("woff2"),
+      /* FF39+,Chrome36+, Opera24+*/ url("/fonts/IRANYekanWebRegular.ttf")
         format("truetype");
   }
 }
