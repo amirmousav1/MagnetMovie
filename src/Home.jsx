@@ -1,4 +1,5 @@
 import { useState } from "react";
+import toast from "react-hot-toast";
 import { useNavigate } from "react-router";
 
 function Home() {
@@ -7,6 +8,10 @@ function Home() {
 
   function submitSearch(e) {
     e.preventDefault();
+    if (!query) {
+      toast.error("لطفا اسم فیلم مورد نظر را وارد کنید.");
+      return;
+    }
     navigate(`/search?query=${query}&page=1`);
   }
   return (

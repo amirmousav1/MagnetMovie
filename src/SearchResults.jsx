@@ -10,7 +10,7 @@ function SearchResults() {
   const query = searchParams.get("query");
   const page = Number(searchParams.get("page")) || 1;
 
-  const { data, isPending } = useQuery({
+  const { data, isPending, isError } = useQuery({
     queryKey: ["searchResults", query, page],
     queryFn: () => getSearchResults(query, page),
   });
@@ -22,11 +22,16 @@ function SearchResults() {
     searchParams.set("page", page - 1);
     setSearchParams(searchParams);
   }
-  const results = data?.data?.movies;
+  const results = data?.data?.movies || [];
 
-  if (isPending) return <SyncLoader color="#6A0DAD" />;
+  if (isPending)
+    return (
+      <div className="flex justify-center items-center h-[60dvh]">
+        <SyncLoader color="#6A0DAD" />
+      </div>
+    );
 
-  if (data.data.movie_count === 0) return <Error />;
+  if (data.data.movie_count === 0 || isError) return <Error />;
 
   return (
     <div className="md:mx-20 bg-white p-8 rounded-lg">
