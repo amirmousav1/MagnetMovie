@@ -49,7 +49,7 @@ function Home() {
           جستجو
         </button>
       </form>
-      <h1 className="text-xl font-semibold">مووی مگنت، جستجوگر تورنت فیلم</h1>
+      <h1 className="text-xl font-semibold">مگنت مووی، جستجوگر تورنت فیلم</h1>
       <h2 className="text-sm text-third">جستجو بین 64 هزار فیلم</h2>
       <span className="text-sm font-bold text-primary">
         لطفا قبل از جستجو حتما VPN خود را روشن کنید.

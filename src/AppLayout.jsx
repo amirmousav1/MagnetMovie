@@ -17,7 +17,7 @@ function AppLayout() {
         <Outlet />
       </main>
       <footer className="text-center py-5">
-        <p dir="ltr">©{new Date().getFullYear()} - MovieMagnet</p>
+        <p dir="ltr">©{new Date().getFullYear()} - MagnetMovie</p>
       </footer>
     </div>
   );

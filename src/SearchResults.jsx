@@ -34,12 +34,12 @@ function SearchResults() {
   if (data.data.movie_count === 0 || isError) return <Error />;
 
   return (
-    <div className="md:mx-20 bg-white p-8 rounded-lg">
+    <div className="md:mx-20 bg-white p-4 sm:p-8 rounded-lg">
       <h1 className="text-xl font-bold text-center mb-7">
         نتایج جستجو برای &quot;<span className="text-primary">{query}</span>
         &quot;
       </h1>
-      <section className="sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 ">
+      <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-8 ">
         {results.map((result) => (
           <div key={result.id} dir="ltr" className="flex flex-col gap-2 mb-5">
             <Link to={`/movie/${result.imdb_code}`}>

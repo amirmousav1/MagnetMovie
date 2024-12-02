@@ -1,3 +1,5 @@
+const API_KEY = "28c690f8";
+
 export async function getSearchResults(query, page) {
   const res = await fetch(
     `https://yts.mx/api/v2/list_movies.json?query_term=${query}&limit=4&page=${page}`
@@ -7,9 +9,7 @@ export async function getSearchResults(query, page) {
 }
 
 export async function getMovieDetails(id) {
-  const res = await fetch(
-    `https://www.omdbapi.com/?i=${id}&apikey=28c690f8&plot=full`
-  );
+  const res = await fetch(`https://www.omdbapi.com/?i=${id}&apikey=${API_KEY}`);
   const data = await res.json();
   return data;
 }

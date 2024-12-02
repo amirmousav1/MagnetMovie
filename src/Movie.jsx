@@ -70,7 +70,16 @@ function Movie() {
                 />
               </svg>
             </div>
-            <span className="text-sm mr-2">امتیاز IMDb:</span>
+            <span className="text-sm mr-2">
+              امتیاز{" "}
+              <a
+                className="text-primary"
+                href={`https://www.imdb.com/title/${data.imdbID}`}
+              >
+                IMDb
+              </a>
+              :
+            </span>
             <span className="text-sm mr-1">{`${data.imdbRating} از ${data.imdbVotes} رای`}</span>
           </div>
           <div className="bg-secondary flex rounded-lg items-center">
