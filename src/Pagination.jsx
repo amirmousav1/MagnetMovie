@@ -4,7 +4,8 @@ function Pagination({
   handleNextPage,
   currentPage,
 }) {
-  const pagesNumber = Math.round(resultsNumber / 4);
+  const pagesNumber = Math.ceil(resultsNumber / 4);
+  console.log(pagesNumber);
   currentPage = !currentPage ? 1 : currentPage;
   return (
     <nav className="col-span-4">
