@@ -2,6 +2,7 @@
 
 MagnetMovie is a powerful tool to search for your favorite movies and download their torrent files or copy magnet links to start downloading effortlessly.
 
+
 ## 🌟 Features
 
 - Search for movies and TV series by name.
@@ -9,9 +10,11 @@ MagnetMovie is a powerful tool to search for your favorite movies and download t
 - Download torrent files directly.
 - Copy magnet links with one click.
 
+
 ## 🚀 Live Demo
 
 Check out the live demo: [MagnetMovie](https://magnetmovie.netlify.app)
+
 
 ## 🛠️ Technologies Used
 
@@ -25,6 +28,7 @@ This project was built using:
 - [react-spinners](https://www.davidhu.io/react-spinners/)
 - [Vite](https://vitejs.dev/) for fast development and build.
 
+
 ## 🗂️ Data Sources
 
 MagnetMovie utilizes the following public APIs:
@@ -32,12 +36,14 @@ MagnetMovie utilizes the following public APIs:
 - [OMDb API](https://www.omdbapi.com/) for fetching detailed information about movies.
 - [YTS API](https://yts.mx/api) for retrieving torrent links for movies.
 
+
 ## 📦 Prerequisites
 
 Ensure you have the following installed before getting started:
 
 - [Node.js](https://nodejs.org/) (Version 16 or later recommended)
 - npm or yarn package manager.
+
 
 ## ⚡ Getting Started
 
@@ -75,9 +81,11 @@ npm run build
 npm run preview
 ```
 
+
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to open issues or submit pull requests to improve the project.
+
 
 ## 📧 Contact
 
