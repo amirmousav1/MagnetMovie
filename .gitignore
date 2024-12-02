@@ -1,7 +1,10 @@
 # Logs
 logs
-fonts
 *.log
+*.woff
+*.woff2
+*.eot
+*.ttf
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
